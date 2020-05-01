@@ -8,7 +8,7 @@ const Home = () => {
   const btn = Create.element('BUTTON');
   const p = Create.element('P');
   const pText = Create.text(
-    'Taste the difference that goodness creates. All of our meat are hormone and preservative free.'
+    'Taste the difference that goodness creates. All of our meat are hormone and preservative free.',
   );
 
   h1.appendChild(h1Text);

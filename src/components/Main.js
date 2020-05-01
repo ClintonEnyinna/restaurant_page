@@ -32,13 +32,12 @@ const Main = (() => {
   const choose = (page) => {
     if (page === 'home') {
       return home();
-    } else if (page === 'about') {
+    } if (page === 'about') {
       return about();
-    } else if (page === 'contact') {
+    } if (page === 'contact') {
       return contact();
-    } else {
-      return menu();
     }
+    return menu();
   };
 
   return { choose };
