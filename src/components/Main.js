@@ -1,28 +1,47 @@
 import Create from './MakeElement';
+import About from './About';
+import Contact from './Contact';
+import Menu from './Menu';
+import Home from './Home';
 
-const Main = () => {
+const Main = (() => {
   const main = Create.element('MAIN');
-  const h1 = Create.element('H1');
-  const h1Text = Create.text("The Best Burges You'll Ever Taste");
-  const leftDiv = Create.element('DIV');
-  const rightDiv = Create.element('DIV');
-  const btnTxt = Create.text('Make an order');
-  const btn = Create.element('BUTTON');
-  const p = Create.element('P');
-  const pText = Create.text(
-    'Our meats are the result of our commitment to the welfare of the animals we raise, the sustainability of our planet, and the health of our families. Taste the difference that goodness creates. All of our meat are hormone and preservative free.'
-  );
 
-  main.appendChild(leftDiv);
-  main.appendChild(rightDiv);
-  h1.appendChild(h1Text);
-  leftDiv.appendChild(h1);
-  p.appendChild(pText);
-  leftDiv.appendChild(p);
-  btn.appendChild(btnTxt);
-  leftDiv.appendChild(btn);
+  const home = () => {
+    main.innerHTML = '';
+    main.appendChild(Home());
+    return main;
+  };
 
-  return main;
-};
+  const about = () => {
+    main.innerHTML = '';
+    main.appendChild(About());
+    return main;
+  };
+  const contact = () => {
+    main.innerHTML = '';
+    main.appendChild(Contact());
+    return main;
+  };
+  const menu = () => {
+    main.innerHTML = '';
+    main.appendChild(Menu());
+    return main;
+  };
+
+  const choose = (page) => {
+    if (page === 'home') {
+      return home();
+    } else if (page === 'about') {
+      return about();
+    } else if (page === 'contact') {
+      return contact();
+    } else {
+      return menu();
+    }
+  };
+
+  return { choose };
+})();
 
 export default Main;

@@ -10,10 +10,11 @@ const Header = () => {
   header.appendChild(h2);
   header.appendChild(nav);
 
+  h2.classList.add('logo');
   h2.appendChild(h2Text);
   nav.appendChild(ul);
 
-  ['Menu', 'Contact', 'about'].forEach((name) => {
+  ['Menu', 'Contact', 'About'].forEach((name) => {
     const li = Create.element('li');
     const liTxt = Create.text(name);
     ul.appendChild(li);
