@@ -1,16 +1,15 @@
-import Create from './MakeElement';
+import { element, text } from './MakeElement';
 
 const Menu = () => {
-  const div = Create.element('DIV');
-  const h2 = Create.element('H2');
-  const h2Txt = Create.text('Menu');
-  const p = Create.element('P');
-  const pTxt = Create.text("Today's menu");
+  const div = element('DIV');
+  const h2 = element('H2');
+  const h2Txt = text('Menu');
+  const p = element('P');
+  const pTxt = text("Today's menu");
 
   h2.appendChild(h2Txt);
   p.appendChild(pTxt);
-  div.appendChild(h2);
-  div.appendChild(p);
+  div.append(h2, p);
   div.classList.add('contact');
   return div;
 };
