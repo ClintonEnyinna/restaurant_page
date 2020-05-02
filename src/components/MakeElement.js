@@ -1,15 +1,11 @@
-const Create = (() => {
-  const element = (element) => {
-    const el = document.createElement(element);
-    return el;
-  };
+const element = (element) => {
+  const el = document.createElement(element);
+  return el;
+};
 
-  const text = (text) => {
-    const txt = document.createTextNode(text);
-    return txt;
-  };
+const text = (text) => {
+  const txt = document.createTextNode(text);
+  return txt;
+};
 
-  return { element, text };
-})();
-
-export default Create;
+export { element, text };
