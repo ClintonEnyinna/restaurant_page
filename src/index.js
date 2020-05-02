@@ -6,11 +6,7 @@ import './style.css';
 const page = document.querySelector('#content');
 
 const render = (currentPage) => {
-  const pageFragment = document.createDocumentFragment();
-  pageFragment.appendChild(Header());
-  pageFragment.appendChild(Main.choose(currentPage));
-  pageFragment.appendChild(Footer());
-  page.appendChild(pageFragment);
+  page.append(Header(), Main(currentPage), Footer());
 };
 
 render('home');

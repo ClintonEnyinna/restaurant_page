@@ -1,11 +1,11 @@
-import Create from './MakeElement';
+import { element, text } from './MakeElement';
 
 const Footer = () => {
-  const footer = Create.element('FOOTER');
+  const footer = element('FOOTER');
 
   ['facebook', 'twitter', 'instagram'].forEach((name) => {
-    const i = Create.element('I');
-    const iTxt = Create.text(name);
+    const i = element('I');
+    const iTxt = text(name);
 
     i.appendChild(iTxt);
     footer.appendChild(i);
