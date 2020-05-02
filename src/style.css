@@ -1,0 +1,140 @@
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('./font/Comfortaa-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('./font/Comfortaa-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('./font/Comfortaa-Light.ttf') format('truetype');
+  font-weight: lighter;
+}
+
+body,
+ul,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+button {
+  font-family: 'Comfortaa';
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 50px;
+  background: url('./img/hamburger.jpeg') no-repeat bottom/cover;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  color: #b37236;
+}
+
+main {
+  display: flex;
+  font-weight: normal;
+}
+
+main div.hero {
+  padding-top: calc(100vh * 0.2);
+  width: 40%;
+}
+
+main h1 {
+  font-size: 50px;
+}
+
+main p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+footer {
+  display: flex;
+  font-weight: lighter;
+  width: calc(100% - 100px);
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 50px;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  font-weight: bold;
+}
+
+li,
+i {
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+button {
+  font-size: 22px;
+  padding: 15px 50px;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #b37236;
+  color: white;
+  border: none;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #965f2c;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.menu,
+.contact,
+.about {
+  padding: 50px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px), (max-height: 800px) {
+  #content {
+    padding: 30px;
+  }
+  main div.hero {
+    padding-top: calc(100vh * 0.2);
+    width: 100%;
+  }
+  main h1 {
+    font-size: 40px;
+  }
+  button {
+    font-size: 22px;
+    padding: 15px 30px;
+    margin-top: 10px;
+  }
+  footer {
+    width: calc(100% - 60px);
+    padding-bottom: 20px;
+    justify-content: center;
+  }
+  li {
+    padding: 0 5px;
+  }
+}
